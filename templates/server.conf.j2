@@ -5,7 +5,7 @@
 
 {
   "wrapper": {
-    "address": "{{ vars['ansible_' ~ tinc_prefix ~ tinc_name]['ipv4']['address'] }}",
+    "address": "{{ vpn_ip }}",
     "port": {{ xnbd_port }},
     "socket": "/var/run/xnbd.ctl",
     "logpath": "/var/log/xnbd.log",
