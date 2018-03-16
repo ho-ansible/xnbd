@@ -1,4 +1,4 @@
 ---
-xnbd_address: "{{ ansible_default_ipv4.address }}"
+xnbd_address: 127.0.0.1
 xnbd_port: 8250
 xnbd_img: /srv/nbd0.img
