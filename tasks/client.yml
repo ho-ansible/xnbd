@@ -1,13 +1,11 @@
 ---
 - name: network block device | packages
   tags:
-  - package
+    - package
   package:
-   name: "{{ item }}"
-   state: latest
+    name: 
+      - xnbd-client
   notify: restart xnbd
-  with_items:
-  - xnbd-client
 
 - name: network block device | service
   tags:
