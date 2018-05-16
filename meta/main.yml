@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Sean Ho
+  description: xnbd network block device
+  company: Anchorlytics Consulting
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  platforms:
+   - name: Debian
+     versions:
+     - stable
+     - 9
+
+  galaxy_tags:
+    - nbd
+    - storage
+    - block
+
+dependencies: []
