@@ -1,7 +1,6 @@
-##
-# /etc/xnbd.conf
-# {{ ansible_managed }}
+## /etc/xnbd.conf
 # Network block device: client
+# {{ ansible_managed }}
 
 {
 {% for host in groups['xnbd-server'] %}
