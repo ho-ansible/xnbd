@@ -1,5 +1,24 @@
 ---
-- include_tasks: server.yml
-  when: '"xnbd-server" in group_names'
-- include_tasks: client.yml
-  when: '"xnbd-client" in group_names'
+
+- name: network block device | package
+  tags:
+    - package
+  package:
+    name: 
+      - xnbd-{{ xnbd_role }}
+  notify: restart xnbd
+
+- name: network block device | config
+  tags:
+    - config
+  template:
+    src: "{{ xnbd_role }}.conf.j2"
+    dest: /etc/xnbd.conf
+  notify: restart xnbd
+
+- name: network block device | service
+  tags:
+  - service
+  service:
+    name: xnbd-common
+    enabled: yes
