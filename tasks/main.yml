@@ -1,5 +1,5 @@
 ---
 - include_tasks: server.yml
-  when: 'xnbd-server' in group_names
+  when: "'xnbd-server' in group_names"
 - include_tasks: client.yml
-  when: 'xnbd-client' in group_names
+  when: "'xnbd-client' in group_names"
