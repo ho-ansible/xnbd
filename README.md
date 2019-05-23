@@ -14,10 +14,7 @@ ionice -c 3 dd if=/dev/zero of=/srv/nbd0.img bs=1M count=200K
 + `xnbd_port` (default: 8250): for server to listen on
 + `xnbd_img` (default: /srv/nbd0.img): local block device
   (e.g., /dev/sda1) or image file to export
-+ `xnbd_server_group` (default: xnbd-server): name of
-  ansible inventory group for all xnbd servers.
-  A host using this role without being in the server group
-  will be configured as a client.
++ `xnbd_role` (default: server): either `client` (mounts remote block devices) or `server` (exports local block device for others)
 
 ## Dependencies
 None.

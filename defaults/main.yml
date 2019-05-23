@@ -3,4 +3,4 @@ xnbd_address: 127.0.0.1
 xnbd_port: 8250
 xnbd_img: /srv/nbd0.img
 
-xnbd_server_group: xnbd-server
+xnbd_role: server

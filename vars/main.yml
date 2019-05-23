@@ -1,2 +1,1 @@
 ---
-xnbd_role: "{{ (xnbd_server_group in group_names) | ternary('server', 'client') }}"
