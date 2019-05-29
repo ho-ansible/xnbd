@@ -12,10 +12,14 @@ ionice -c 3 dd if=/dev/zero of=/srv/nbd0.img bs=1M count=200K
 ## Role Variables
 + `xnbd_role` (default: server): a `server` exports a local block dev
   for a `client` to mount remotely
-+ `xnbd_address`: IP to bind to
+
+### For clients:
++ `xnbd_hosts`: inventory list of servers to connect to.
+  Parsed by `inventory_hostnames`, so can include groups and set operators.
 
 ### For servers:
-+ `xnbd_port` (default: 8250): for server to listen on
++ `xnbd_address` (default: localhost): 
++ `xnbd_port` (default: 8250): IP and port for server to listen on
 + `xnbd_img` (default: /srv/nbd0.img): local block device 
   (e.g., /dev/sda1) or image file to export
 
