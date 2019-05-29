@@ -3,7 +3,7 @@
 # {{ ansible_managed }}
 
 {
-{% for host in groups['xnbd-server'] %}
+{% for host in groups['xnbd_server'] %}
   "nbd{{ loop.index0 }}": {
     "host": "{{ hostvars[host].xnbd_address }}",
     "port": {{ xnbd_port }},
