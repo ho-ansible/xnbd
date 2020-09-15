@@ -6,7 +6,7 @@ This functionality has been moved to kubernetes,
 so this ansible role is no longer maintained.
 
 ## Requirements
-Only tested on Debian stable, for now.
+Only tested on Debian buster.
 
 Create 200GB image (cannot be sparse file):
 ```
@@ -27,16 +27,12 @@ ionice -c 3 dd if=/dev/zero of=/srv/nbd0.img bs=1M count=200K
 + `xnbd_img` (default: /srv/nbd0.img): local block device 
   (e.g., /dev/sda1) or image file to export
 
+## Playbooks
++ `main.yml`: apply role
++ `restart.yml`: restart service
+
 ## Dependencies
 None.
-
-## Example Playbook
-
-```
-- hosts: all
-  roles:
-    - { role: ho-ansible.xnbd }
-```
 
 ## License
 MIT

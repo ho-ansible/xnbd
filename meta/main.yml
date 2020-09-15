@@ -7,14 +7,13 @@ galaxy_info:
   min_ansible_version: 1.2
 
   platforms:
-   - name: Debian
-     versions:
-     - stable
-     - 9
+  - name: Debian
+    versions:
+    - 9
 
   galaxy_tags:
-    - nbd
-    - storage
-    - block
+  - nbd
+  - storage
+  - block
 
 dependencies: []

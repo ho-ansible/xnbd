@@ -1,0 +1,15 @@
+#! /usr/bin/env ansible-playbook
+# Restart xnbd service
+# Replace 'xnbd' with your own inventory group
+---
+- name: xnbd-restart | Restart network block device servers
+  hosts: xnbd_server
+  gather_facts: false
+  tasks:
+  - name: Restart xnbd
+    service:
+      name: xnbd-common
+      state: restarted
+    tags:
+    - xnbd
+    - nbd

@@ -1,0 +1,11 @@
+#! /usr/bin/env ansible-playbook
+# Configure xnbd access block device over network
+# Replace 'xnbd' with your own inventory group
+---
+- name: xnbd | network block device
+  hosts: xnbd
+  roles:
+  - role: xnbd
+    tags:
+    - xnbd
+    - nbd
