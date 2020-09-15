@@ -2,15 +2,14 @@
 
 - name: network block device | package
   tags:
-    - package
+  - package
   package:
-    name: 
-      - xnbd-{{ xnbd_role }}
+    name: xnbd-{{ xnbd_role }}
   notify: restart xnbd
 
 - name: network block device | config
   tags:
-    - config
+  - config
   template:
     src: "{{ xnbd_role }}.conf.j2"
     dest: /etc/xnbd.conf
