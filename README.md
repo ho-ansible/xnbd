@@ -29,13 +29,13 @@ ionice -c 3 dd if=/dev/zero of=/srv/nbd0.img bs=1M count=200K
 
 ## Playbooks
 + `main.yml`: apply role
-+ `restart.yml`: restart service
++ `uninstall.yml`: remove. Run before removing config from inventory.
 
 ## Dependencies
 None.
 
 ## License
-MIT
++ Ansible role licensed [MIT](LICENSE)
 
 ## Author Information
-Sean Ho, https://github.com/ho-ansible/
++ Ansible role by [Sean Ho](https://github.com/ho-ansible/)
